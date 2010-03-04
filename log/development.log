@@ -11525,3 +11525,1999 @@ Processing PeopleController#create (for 127.0.0.1 at 2010-03-04 13:13:11) [POST]
 Rendering people/new
 Rendered people/_form (16.3ms)
 Completed in 46ms (View: 18, DB: 2) | 200 OK [http://localhost/people]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePeople (20100302025203)
+Migrating to BooleanBox (20100302031953)
+Migrating to SelectBox (20100302155917)
+Migrating to Email (20100303032351)
+Migrating to Exclusion (20100303040548)
+Migrating to Qualification (20100303050501)
+Migrating to Password (20100303053049)
+Migrating to Age (20100303062850)
+Migrating to Payment (20100303065210)
+Migrating to ExpirationDate (20100303072004)
+Migrating to Phone (20100303090422)
+Migrating to Passport (20100304044402)
+Migrating to CreateCustomers (20100304070445)
+  [4;36;1mSQL (156.5ms)[0m   [0;1mCREATE TABLE `customers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `customer_name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (45.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100304070445')[0m
+Migrating to Assoc (20100304070822)
+  [4;36;1mSQL (306.3ms)[0m   [0;1mALTER TABLE `people` ADD `customer_id` varchar(255)[0m
+  [4;35;1mSQL (246.8ms)[0m   [0mALTER TABLE `people` ADD `customer_name` varchar(255)[0m
+  [4;36;1mSQL (313.6ms)[0m   [0;1mALTER TABLE `people` ADD `order_id` varchar(255)[0m
+  [4;35;1mSQL (315.1ms)[0m   [0mALTER TABLE `people` ADD `order_date` date[0m
+  [4;36;1mSQL (43.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100304070822')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mSHOW FIELDS FROM `customers`[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mdescribe `customers`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW KEYS FROM `customers`[0m
+  [4;35;1mSQL (3.5ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mSQL (3.2ms)[0m   [0;1mdescribe `people`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW KEYS FROM `people`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePeople (20100302025203)
+Migrating to BooleanBox (20100302031953)
+Migrating to SelectBox (20100302155917)
+Migrating to Email (20100303032351)
+Migrating to Exclusion (20100303040548)
+Migrating to Qualification (20100303050501)
+Migrating to Password (20100303053049)
+Migrating to Age (20100303062850)
+Migrating to Payment (20100303065210)
+Migrating to ExpirationDate (20100303072004)
+Migrating to Phone (20100303090422)
+Migrating to Passport (20100304044402)
+Migrating to CreateCustomers (20100304070445)
+Migrating to Assoc (20100304070822)
+Migrating to CreateSuppliers (20100304080514)
+  [4;36;1mSQL (156.3ms)[0m   [0;1mCREATE TABLE `suppliers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (44.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100304080514')[0m
+Migrating to CreateAccounts (20100304081529)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mMysql::Error: Table 'suppliers' already exists: CREATE TABLE `suppliers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePeople (20100302025203)
+Migrating to BooleanBox (20100302031953)
+Migrating to SelectBox (20100302155917)
+Migrating to Email (20100303032351)
+Migrating to Exclusion (20100303040548)
+Migrating to Qualification (20100303050501)
+Migrating to Password (20100303053049)
+Migrating to Age (20100303062850)
+Migrating to Payment (20100303065210)
+Migrating to ExpirationDate (20100303072004)
+Migrating to Phone (20100303090422)
+Migrating to Passport (20100304044402)
+Migrating to CreateCustomers (20100304070445)
+Migrating to Assoc (20100304070822)
+Migrating to CreateSuppliers (20100304080514)
+Migrating to CreateAccounts (20100304081529)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePeople (20100302025203)
+Migrating to BooleanBox (20100302031953)
+Migrating to SelectBox (20100302155917)
+Migrating to Email (20100303032351)
+Migrating to Exclusion (20100303040548)
+Migrating to Qualification (20100303050501)
+Migrating to Password (20100303053049)
+Migrating to Age (20100303062850)
+Migrating to Payment (20100303065210)
+Migrating to ExpirationDate (20100303072004)
+Migrating to Phone (20100303090422)
+Migrating to Passport (20100304044402)
+Migrating to CreateCustomers (20100304070445)
+Migrating to Assoc (20100304070822)
+Migrating to CreateSuppliers (20100304080514)
+Migrating to CreateAccounts (20100304081529)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePeople (20100302025203)
+Migrating to BooleanBox (20100302031953)
+Migrating to SelectBox (20100302155917)
+Migrating to Email (20100303032351)
+Migrating to Exclusion (20100303040548)
+Migrating to Qualification (20100303050501)
+Migrating to Password (20100303053049)
+Migrating to Age (20100303062850)
+Migrating to Payment (20100303065210)
+Migrating to ExpirationDate (20100303072004)
+Migrating to Phone (20100303090422)
+Migrating to Passport (20100304044402)
+Migrating to CreateCustomers (20100304070445)
+Migrating to Assoc (20100304070822)
+Migrating to CreateSuppliers (20100304080514)
+Migrating to CreateAccounts (20100304081529)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePeople (20100302025203)
+Migrating to BooleanBox (20100302031953)
+Migrating to SelectBox (20100302155917)
+Migrating to Email (20100303032351)
+Migrating to Exclusion (20100303040548)
+Migrating to Qualification (20100303050501)
+Migrating to Password (20100303053049)
+Migrating to Age (20100303062850)
+Migrating to Payment (20100303065210)
+Migrating to ExpirationDate (20100303072004)
+Migrating to Phone (20100303090422)
+Migrating to Passport (20100304044402)
+Migrating to CreateCustomers (20100304070445)
+Migrating to Assoc (20100304070822)
+Migrating to Wrong (20100304080514)
+Migrating to CreateAccounts (20100304081529)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePeople (20100302025203)
+Migrating to BooleanBox (20100302031953)
+Migrating to SelectBox (20100302155917)
+Migrating to Email (20100303032351)
+Migrating to Exclusion (20100303040548)
+Migrating to Qualification (20100303050501)
+Migrating to Password (20100303053049)
+Migrating to Age (20100303062850)
+Migrating to Payment (20100303065210)
+Migrating to ExpirationDate (20100303072004)
+Migrating to Phone (20100303090422)
+Migrating to Passport (20100304044402)
+Migrating to CreateCustomers (20100304070445)
+Migrating to Assoc (20100304070822)
+Migrating to Wrong (20100304080514)
+Migrating to CreateAccounts (20100304081529)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mMysql::Error: Table 'suppliers' already exists: CREATE TABLE `suppliers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePeople (20100302025203)
+Migrating to BooleanBox (20100302031953)
+Migrating to SelectBox (20100302155917)
+Migrating to Email (20100303032351)
+Migrating to Exclusion (20100303040548)
+Migrating to Qualification (20100303050501)
+Migrating to Password (20100303053049)
+Migrating to Age (20100303062850)
+Migrating to Payment (20100303065210)
+Migrating to ExpirationDate (20100303072004)
+Migrating to Phone (20100303090422)
+Migrating to Passport (20100304044402)
+Migrating to CreateCustomers (20100304070445)
+Migrating to Assoc (20100304070822)
+Migrating to Wrong (20100304080514)
+Migrating to CreateAccounts (20100304081529)
+  [4;36;1mSQL (246.4ms)[0m   [0;1mCREATE TABLE `suppliers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (144.6ms)[0m   [0mCREATE TABLE `accounts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `supplier_id` varchar(255), `account_number` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (43.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100304081529')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mSQL (2.7ms)[0m   [0mdescribe `accounts`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW KEYS FROM `accounts`[0m
+  [4;35;1mSQL (3.1ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mdescribe `people`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW KEYS FROM `people`[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mSHOW FIELDS FROM `suppliers`[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mdescribe `suppliers`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `suppliers`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePeople (20100302025203)
+Migrating to BooleanBox (20100302031953)
+Migrating to SelectBox (20100302155917)
+Migrating to Email (20100303032351)
+Migrating to Exclusion (20100303040548)
+Migrating to Qualification (20100303050501)
+Migrating to Password (20100303053049)
+Migrating to Age (20100303062850)
+Migrating to Payment (20100303065210)
+Migrating to ExpirationDate (20100303072004)
+Migrating to Phone (20100303090422)
+Migrating to Passport (20100304044402)
+Migrating to CreateCustomers (20100304070445)
+Migrating to Assoc (20100304070822)
+Migrating to Wrong (20100304080514)
+Migrating to CreateAccounts (20100304081529)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `accounts`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `accounts`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `accounts`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mdescribe `people`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `people`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `suppliers`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `suppliers`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `suppliers`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-04 17:33:08) [GET]
+
+NameError (uninitialized constant AccountsController):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (37.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-04 17:35:06) [GET]
+
+ActionController::RoutingError (No route matches "/account" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-04 17:35:06) [GET]
+
+ActionController::RoutingError (No route matches "/account" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-04 17:35:08) [GET]
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT * FROM `accounts` [0m
+
+ActionView::MissingTemplate (Missing template accounts/index.erb in view path app/views):
+  app/controllers/accounts_controller.rb:5:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-04 17:35:52) [GET]
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM `accounts` [0m
+Rendering accounts/index
+Completed in 72ms (View: 53, DB: 1) | 200 OK [http://localhost/accounts]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-04 17:35:54) [GET]
+  [4;36;1mAccount Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+Rendering accounts/new
+
+ActionView::TemplateError (undefined local variable or method `supplier' for #<ActionView::Base:0xb73c27a8>) on line #12 of app/views/accounts/new.html.erb:
+9:   </p>
+10:   <p>
+11:     <%= f.label :Supplier_ID %><br />
+12:     <%= f.collection_select(:supplier_id, supplier.all, :id, options ={:prompt => "-Select ID"}) %>
+13:   </p>
+14:   <p>
+15:     <%= f.submit 'Create' %>
+
+    app/views/accounts/new.html.erb:12
+    app/views/accounts/new.html.erb:3
+    app/controllers/accounts_controller.rb:23:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (56.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-04 17:37:18) [GET]
+  [4;35;1mAccount Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accounts`[0m
+Rendering accounts/new
+
+ActionView::TemplateError (undefined local variable or method `supplier' for #<ActionView::Base:0xb757d778>) on line #12 of app/views/accounts/new.html.erb:
+9:   </p>
+10:   <p>
+11:     <%= f.label :Supplier_ID %><br />
+12:     <%= f.collection_select(:Supplier_id, supplier.all, :id, options ={:prompt => "-Select ID"}) %>
+13:   </p>
+14:   <p>
+15:     <%= f.submit 'Create' %>
+
+    app/views/accounts/new.html.erb:12
+    app/views/accounts/new.html.erb:3
+    app/controllers/accounts_controller.rb:23:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (122.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-04 17:37:19) [GET]
+  [4;36;1mAccount Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+Rendering accounts/new
+
+ActionView::TemplateError (undefined local variable or method `supplier' for #<ActionView::Base:0xb71d2f60>) on line #12 of app/views/accounts/new.html.erb:
+9:   </p>
+10:   <p>
+11:     <%= f.label :Supplier_ID %><br />
+12:     <%= f.collection_select(:Supplier_id, supplier.all, :id, options ={:prompt => "-Select ID"}) %>
+13:   </p>
+14:   <p>
+15:     <%= f.submit 'Create' %>
+
+    app/views/accounts/new.html.erb:12
+    app/views/accounts/new.html.erb:3
+    app/controllers/accounts_controller.rb:23:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (61.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-04 17:38:00) [GET]
+  [4;35;1mAccount Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `accounts`[0m
+Rendering accounts/new
+  [4;36;1mSupplier Load (0.4ms)[0m   [0;1mSELECT * FROM `suppliers` [0m
+
+ActionView::TemplateError (undefined method `Supplier_id' for #<Account:0xb77a044c>) on line #12 of app/views/accounts/new.html.erb:
+9:   </p>
+10:   <p>
+11:     <%= f.label :Supplier_ID %><br />
+12:     <%= f.collection_select(:Supplier_id, Supplier.all, :id, options ={:prompt => "-Select ID"}) %>
+13:   </p>
+14:   <p>
+15:     <%= f.submit 'Create' %>
+
+    app/views/accounts/new.html.erb:12
+    app/views/accounts/new.html.erb:3
+    app/controllers/accounts_controller.rb:23:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (79.7ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-04 17:38:01) [GET]
+  [4;35;1mAccount Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `accounts`[0m
+Rendering accounts/new
+  [4;36;1mSupplier Load (0.2ms)[0m   [0;1mSELECT * FROM `suppliers` [0m
+
+ActionView::TemplateError (undefined method `Supplier_id' for #<Account:0xb757acf8>) on line #12 of app/views/accounts/new.html.erb:
+9:   </p>
+10:   <p>
+11:     <%= f.label :Supplier_ID %><br />
+12:     <%= f.collection_select(:Supplier_id, Supplier.all, :id, options ={:prompt => "-Select ID"}) %>
+13:   </p>
+14:   <p>
+15:     <%= f.submit 'Create' %>
+
+    app/views/accounts/new.html.erb:12
+    app/views/accounts/new.html.erb:3
+    app/controllers/accounts_controller.rb:23:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (129.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-04 17:38:02) [GET]
+  [4;35;1mAccount Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `accounts`[0m
+Rendering accounts/new
+  [4;36;1mSupplier Load (0.3ms)[0m   [0;1mSELECT * FROM `suppliers` [0m
+
+ActionView::TemplateError (undefined method `Supplier_id' for #<Account:0xb7184464>) on line #12 of app/views/accounts/new.html.erb:
+9:   </p>
+10:   <p>
+11:     <%= f.label :Supplier_ID %><br />
+12:     <%= f.collection_select(:Supplier_id, Supplier.all, :id, options ={:prompt => "-Select ID"}) %>
+13:   </p>
+14:   <p>
+15:     <%= f.submit 'Create' %>
+
+    app/views/accounts/new.html.erb:12
+    app/views/accounts/new.html.erb:3
+    app/controllers/accounts_controller.rb:23:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (60.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-04 17:38:03) [GET]
+  [4;35;1mAccount Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `accounts`[0m
+Rendering accounts/new
+  [4;36;1mSupplier Load (0.2ms)[0m   [0;1mSELECT * FROM `suppliers` [0m
+
+ActionView::TemplateError (undefined method `Supplier_id' for #<Account:0xb73ae1cc>) on line #12 of app/views/accounts/new.html.erb:
+9:   </p>
+10:   <p>
+11:     <%= f.label :Supplier_ID %><br />
+12:     <%= f.collection_select(:Supplier_id, Supplier.all, :id, options ={:prompt => "-Select ID"}) %>
+13:   </p>
+14:   <p>
+15:     <%= f.submit 'Create' %>
+
+    app/views/accounts/new.html.erb:12
+    app/views/accounts/new.html.erb:3
+    app/controllers/accounts_controller.rb:23:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (61.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-04 17:38:05) [GET]
+  [4;35;1mAccount Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `accounts`[0m
+Rendering accounts/new
+  [4;36;1mSupplier Load (0.2ms)[0m   [0;1mSELECT * FROM `suppliers` [0m
+
+ActionView::TemplateError (undefined method `Supplier_id' for #<Account:0xb7540800>) on line #12 of app/views/accounts/new.html.erb:
+9:   </p>
+10:   <p>
+11:     <%= f.label :Supplier_ID %><br />
+12:     <%= f.collection_select(:Supplier_id, Supplier.all, :id, options ={:prompt => "-Select ID"}) %>
+13:   </p>
+14:   <p>
+15:     <%= f.submit 'Create' %>
+
+    app/views/accounts/new.html.erb:12
+    app/views/accounts/new.html.erb:3
+    app/controllers/accounts_controller.rb:23:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (126.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-04 17:39:05) [GET]
+  [4;35;1mAccount Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `accounts`[0m
+Rendering accounts/new
+  [4;36;1mSupplier Load (0.3ms)[0m   [0;1mSELECT * FROM `suppliers` [0m
+
+ActionView::TemplateError (account_url failed to generate from {:action=>"show", :controller=>"accounts"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["accounts", :id] - are they all satisfied?) on line #18 of app/views/accounts/new.html.erb:
+15:     <%= f.submit 'Create' %>
+16:   </p>
+17: <% end %>
+18: <%= link_to 'Back', account_path %>
+
+    (eval):16:in `account_path'
+    app/views/accounts/new.html.erb:18
+    app/controllers/accounts_controller.rb:23:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (124.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-04 17:39:22) [GET]
+  [4;35;1mAccount Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `accounts`[0m
+Rendering accounts/new
+  [4;36;1mSupplier Load (0.2ms)[0m   [0;1mSELECT * FROM `suppliers` [0m
+Completed in 27ms (View: 17, DB: 2) | 200 OK [http://localhost/accounts/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#create (for 127.0.0.1 at 2010-03-04 17:43:46) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"2/IuESw3pAWvfHWu1RzUjnJCYn6Xb8EVRG9L4gjPXQQ=", "account"=>{"account_number"=>"wewe"}}
+  [4;35;1mAccount Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `accounts`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+Rendering accounts/new
+  [4;36;1mSupplier Load (0.3ms)[0m   [0;1mSELECT * FROM `suppliers` [0m
+Completed in 74ms (View: 44, DB: 3) | 200 OK [http://localhost/accounts]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#create (for 127.0.0.1 at 2010-03-04 17:43:52) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"2/IuESw3pAWvfHWu1RzUjnJCYn6Xb8EVRG9L4gjPXQQ=", "account"=>{"account_number"=>"22222"}}
+  [4;35;1mAccount Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `accounts`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAccount Create (0.8ms)[0m   [0mINSERT INTO `accounts` (`created_at`, `updated_at`, `supplier_id`, `account_number`) VALUES('2010-03-04 09:43:52', '2010-03-04 09:43:52', NULL, '22222')[0m
+  [4;36;1mSQL (43.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/accounts/1
+Completed in 79ms (DB: 47) | 302 Found [http://localhost/accounts]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#show (for 127.0.0.1 at 2010-03-04 17:43:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAccount Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `accounts`[0m
+  [4;36;1mAccount Load (0.8ms)[0m   [0;1mSELECT * FROM `accounts` WHERE (`accounts`.`id` = 1) [0m
+Rendering accounts/show
+
+ActionView::TemplateError (undefined method `name' for #<Account:0xb7058d38>) on line #4 of app/views/accounts/show.html.erb:
+1: 
+2: <p>
+3:   <b>Name:</b>
+4:   <%=h @account.name %>
+5: </p>
+6: 
+7: 
+
+    app/views/accounts/show.html.erb:4
+    app/controllers/accounts_controller.rb:14:in `show'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (121.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#create (for 127.0.0.1 at 2010-03-04 17:45:18) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"2/IuESw3pAWvfHWu1RzUjnJCYn6Xb8EVRG9L4gjPXQQ=", "account"=>{"account_number"=>"wewe"}}
+  [4;35;1mAccount Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `accounts`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+Rendering accounts/new
+  [4;36;1mSupplier Load (0.2ms)[0m   [0;1mSELECT * FROM `suppliers` [0m
+Completed in 48ms (View: 17, DB: 3) | 200 OK [http://localhost/accounts]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#create (for 127.0.0.1 at 2010-03-04 17:45:20) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"2/IuESw3pAWvfHWu1RzUjnJCYn6Xb8EVRG9L4gjPXQQ=", "account"=>{"account_number"=>"22222"}}
+  [4;35;1mAccount Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accounts`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAccount Create (0.8ms)[0m   [0mINSERT INTO `accounts` (`created_at`, `updated_at`, `supplier_id`, `account_number`) VALUES('2010-03-04 09:45:20', '2010-03-04 09:45:20', NULL, '22222')[0m
+  [4;36;1mSQL (89.8ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/accounts/2
+Completed in 126ms (DB: 94) | 302 Found [http://localhost/accounts]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#show (for 127.0.0.1 at 2010-03-04 17:45:20) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mAccount Columns (12.7ms)[0m   [0mSHOW FIELDS FROM `accounts`[0m
+  [4;36;1mAccount Load (18.1ms)[0m   [0;1mSELECT * FROM `accounts` WHERE (`accounts`.`id` = 2) [0m
+Rendering accounts/show
+Completed in 72ms (View: 19, DB: 31) | 200 OK [http://localhost/accounts/2]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#edit (for 127.0.0.1 at 2010-03-04 17:45:22) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mAccount Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `accounts`[0m
+  [4;36;1mAccount Load (1.2ms)[0m   [0;1mSELECT * FROM `accounts` WHERE (`accounts`.`id` = 2) [0m
+Rendering accounts/edit
+Completed in 28ms (View: 12, DB: 3) | 200 OK [http://localhost/accounts/2/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#update (for 127.0.0.1 at 2010-03-04 17:45:27) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"2/IuESw3pAWvfHWu1RzUjnJCYn6Xb8EVRG9L4gjPXQQ=", "account"=>{"account_number"=>"221"}, "id"=>"2"}
+  [4;35;1mAccount Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `accounts`[0m
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT * FROM `accounts` WHERE (`accounts`.`id` = 2) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mAccount Update (1.3ms)[0m   [0;1mUPDATE `accounts` SET `updated_at` = '2010-03-04 09:45:28', `account_number` = '221' WHERE `id` = 2[0m
+  [4;35;1mSQL (51.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/accounts/2
+Completed in 90ms (DB: 56) | 302 Found [http://localhost/accounts/2]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#show (for 127.0.0.1 at 2010-03-04 17:45:28) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mAccount Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM `accounts` WHERE (`accounts`.`id` = 2) [0m
+Rendering accounts/show
+Completed in 16ms (View: 3, DB: 2) | 200 OK [http://localhost/accounts/2]
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-04 17:45:30) [GET]
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM `accounts` [0m
+Rendering accounts/index
+  [4;35;1mAccount Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `accounts`[0m
+
+ActionView::TemplateError (undefined local variable or method `account' for #<ActionView::Base:0xb73a4848>) on line #13 of app/views/accounts/index.html.erb:
+10: <% @accounts.each do |ac| %>
+11:   <tr>
+12:     <td><%=h ac.account_number %></td>
+13:     <td><%= link_to 'Show', account %></td>
+14:     <td><%= link_to 'Edit', edit_account_path(account) %></td>
+15:     <td><%= link_to 'Destroy', account, :confirm => 'Are you sure?', :method => :delete %></td>
+16:   </tr>
+
+    app/views/accounts/index.html.erb:13
+    app/views/accounts/index.html.erb:10:in `each'
+    app/views/accounts/index.html.erb:10
+    app/controllers/accounts_controller.rb:5:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (55.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-04 17:45:39) [GET]
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM `accounts` [0m
+Rendering accounts/index
+  [4;35;1mAccount Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `accounts`[0m
+
+ActionView::TemplateError (undefined local variable or method `account' for #<ActionView::Base:0xb757a03c>) on line #13 of app/views/accounts/index.html.erb:
+10: <% @accounts.each do |ac| %>
+11:   <tr>
+12:     <td><%=h ac.account_number %></td>
+13:     <td><%= link_to 'Show', account %></td>
+14:     <td><%= link_to 'Edit', edit_account_path(account) %></td>
+15:     <td><%= link_to 'Destroy', account, :confirm => 'Are you sure?', :method => :delete %></td>
+16:   </tr>
+
+    app/views/accounts/index.html.erb:13
+    app/views/accounts/index.html.erb:10:in `each'
+    app/views/accounts/index.html.erb:10
+    app/controllers/accounts_controller.rb:5:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (120.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-04 17:46:00) [GET]
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM `accounts` [0m
+Rendering accounts/index
+  [4;35;1mAccount Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `accounts`[0m
+
+ActionView::TemplateError (undefined local variable or method `account' for #<ActionView::Base:0xb7216db4>) on line #13 of app/views/accounts/index.html.erb:
+10: <% @accounts.each do |ac| %>
+11:   <tr>
+12:     <td><%=h ac.account_number %></td>
+13:     <td><%= link_to 'Show', account %></td>
+14:     <td><%= link_to 'Edit', edit_account_path(account) %></td>
+15:     <td><%= link_to 'Destroy', account, :confirm => 'Are you sure?', :method => :delete %></td>
+16:   </tr>
+
+    app/views/accounts/index.html.erb:13
+    app/views/accounts/index.html.erb:10:in `each'
+    app/views/accounts/index.html.erb:10
+    app/controllers/accounts_controller.rb:5:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (55.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-04 17:46:21) [GET]
+  [4;36;1mAccount Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+Rendering accounts/new
+  [4;35;1mSupplier Load (0.3ms)[0m   [0mSELECT * FROM `suppliers` [0m
+
+ActionView::TemplateError (account_url failed to generate from {:action=>"show", :controller=>"accounts"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["accounts", :id] - are they all satisfied?) on line #18 of app/views/accounts/new.html.erb:
+15:     <%= f.submit 'Create' %>
+16:   </p>
+17: <% end %>
+18: <%= link_to 'Back', account_path %>
+
+    (eval):16:in `account_path'
+    app/views/accounts/new.html.erb:18
+    app/controllers/accounts_controller.rb:23:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (66.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-04 17:46:22) [GET]
+  [4;36;1mAccount Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+Rendering accounts/new
+  [4;35;1mSupplier Load (0.1ms)[0m   [0mSELECT * FROM `suppliers` [0m
+
+ActionView::TemplateError (account_url failed to generate from {:action=>"show", :controller=>"accounts"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["accounts", :id] - are they all satisfied?) on line #18 of app/views/accounts/new.html.erb:
+15:     <%= f.submit 'Create' %>
+16:   </p>
+17: <% end %>
+18: <%= link_to 'Back', account_path %>
+
+    (eval):16:in `account_path'
+    app/views/accounts/new.html.erb:18
+    app/controllers/accounts_controller.rb:23:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (124.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-04 17:46:33) [GET]
+  [4;36;1mAccount Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+Rendering accounts/new
+  [4;35;1mSupplier Load (0.2ms)[0m   [0mSELECT * FROM `suppliers` [0m
+Completed in 56ms (View: 34, DB: 3) | 200 OK [http://localhost/accounts/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-04 17:46:34) [GET]
+  [4;36;1mAccount Load (0.8ms)[0m   [0;1mSELECT * FROM `accounts` [0m
+Rendering accounts/index
+  [4;35;1mAccount Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `accounts`[0m
+
+ActionView::TemplateError (undefined local variable or method `account' for #<ActionView::Base:0xb70f339c>) on line #13 of app/views/accounts/index.html.erb:
+10: <% @accounts.each do |ac| %>
+11:   <tr>
+12:     <td><%=h ac.account_number %></td>
+13:     <td><%= link_to 'Show', account %></td>
+14:     <td><%= link_to 'Edit', edit_account_path(account) %></td>
+15:     <td><%= link_to 'Destroy', account, :confirm => 'Are you sure?', :method => :delete %></td>
+16:   </tr>
+
+    app/views/accounts/index.html.erb:13
+    app/views/accounts/index.html.erb:10:in `each'
+    app/views/accounts/index.html.erb:10
+    app/controllers/accounts_controller.rb:5:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (147.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-04 17:47:24) [GET]
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM `accounts` [0m
+Rendering accounts/index
+  [4;35;1mAccount Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `accounts`[0m
+
+ActionView::TemplateError (undefined local variable or method `account_number' for #<ActionView::Base:0xb7381604>) on line #13 of app/views/accounts/index.html.erb:
+10: <% @accounts.each do |ac| %>
+11:   <tr>
+12:     <td><%=h ac.account_number %></td>
+13:     <td><%= link_to 'Show', account_number %></td>
+14:     <td><%= link_to 'Edit', edit_account_path(account) %></td>
+15:     <td><%= link_to 'Destroy', account, :confirm => 'Are you sure?', :method => :delete %></td>
+16:   </tr>
+
+    app/views/accounts/index.html.erb:13
+    app/views/accounts/index.html.erb:10:in `each'
+    app/views/accounts/index.html.erb:10
+    app/controllers/accounts_controller.rb:5:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (58.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-04 17:47:44) [GET]
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM `accounts` [0m
+Rendering accounts/index
+  [4;35;1mAccount Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `accounts`[0m
+
+ActionView::TemplateError (undefined local variable or method `accounts' for #<ActionView::Base:0xb7530b08>) on line #13 of app/views/accounts/index.html.erb:
+10: <% @accounts.each do |ac| %>
+11:   <tr>
+12:     <td><%=h ac.account_number %></td>
+13:     <td><%= link_to 'Show', accounts %></td>
+14:     <td><%= link_to 'Edit', edit_account_path(account) %></td>
+15:     <td><%= link_to 'Destroy', account, :confirm => 'Are you sure?', :method => :delete %></td>
+16:   </tr>
+
+    app/views/accounts/index.html.erb:13
+    app/views/accounts/index.html.erb:10:in `each'
+    app/views/accounts/index.html.erb:10
+    app/controllers/accounts_controller.rb:5:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (122.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-04 17:47:54) [GET]
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM `accounts` [0m
+Rendering accounts/index
+  [4;35;1mAccount Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `accounts`[0m
+
+ActionView::TemplateError (undefined local variable or method `account' for #<ActionView::Base:0xb717b9f4>) on line #14 of app/views/accounts/index.html.erb:
+11:   <tr>
+12:     <td><%=h ac.account_number %></td>
+13:     
+14:     <td><%= link_to 'Edit', edit_account_path(account) %></td>
+15:     <td><%= link_to 'Destroy', account, :confirm => 'Are you sure?', :method => :delete %></td>
+16:   </tr>
+17: <% end %>
+
+    app/views/accounts/index.html.erb:14
+    app/views/accounts/index.html.erb:10:in `each'
+    app/views/accounts/index.html.erb:10
+    app/controllers/accounts_controller.rb:5:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (54.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-04 17:48:36) [GET]
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM `accounts` [0m
+Rendering accounts/index
+  [4;35;1mAccount Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `accounts`[0m
+Completed in 18ms (View: 9, DB: 2) | 200 OK [http://localhost/accounts]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-04 17:48:40) [GET]
+  [4;36;1mAccount Columns (3.7ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+Rendering accounts/new
+  [4;35;1mSupplier Load (0.3ms)[0m   [0mSELECT * FROM `suppliers` [0m
+Completed in 53ms (View: 29, DB: 4) | 200 OK [http://localhost/accounts/new]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-04 17:49:25) [GET]
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT * FROM `accounts` [0m
+Rendering accounts/index
+  [4;35;1mAccount Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accounts`[0m
+
+ActionView::TemplateError (undefined local variable or method `accounts' for #<ActionView::Base:0xb72608d8>) on line #13 of app/views/accounts/index.html.erb:
+10: <% @accounts.each do |ac| %>
+11:   <tr>
+12:     <td><%=h ac.account_number %></td>
+13:     <td><%= link_to 'Show', accounts %></td>
+14:     <td><%= link_to 'Edit', edit_account_path(account) %></td>
+15:     <td><%= link_to 'Destroy', account, :confirm => 'Are you sure?', :method => :delete %></td>
+16:   </tr>
+
+    app/views/accounts/index.html.erb:13
+    app/views/accounts/index.html.erb:10:in `each'
+    app/views/accounts/index.html.erb:10
+    app/controllers/accounts_controller.rb:5:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (54.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-04 17:49:39) [GET]
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM `accounts` [0m
+Rendering accounts/index
+  [4;35;1mAccount Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `accounts`[0m
+
+ActionView::TemplateError (undefined local variable or method `accounts' for #<ActionView::Base:0xb73e418c>) on line #13 of app/views/accounts/index.html.erb:
+10: <% @accounts.each do |ac| %>
+11:   <tr>
+12:     <td><%=h ac.account_number %></td>
+13:     <td><%= link_to 'Show', accounts %></td>
+14:     <td><%= link_to 'Edit', edit_account_path(account) %></td>
+15:     <td><%= link_to 'Destroy', account, :confirm => 'Are you sure?', :method => :delete %></td>
+16:   </tr>
+
+    app/views/accounts/index.html.erb:13
+    app/views/accounts/index.html.erb:10:in `each'
+    app/views/accounts/index.html.erb:10
+    app/controllers/accounts_controller.rb:5:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (57.7ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-04 17:49:55) [GET]
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT * FROM `accounts` [0m
+Rendering accounts/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #10 of app/views/accounts/index.html.erb:
+7:    
+8:   </tr>
+9: 
+10: <% @account.each do |ac| %>
+11:   <tr>
+12:     <td><%=h ac.account_number %></td>
+13:     <td><%= link_to 'Show', accounts %></td>
+
+    app/views/accounts/index.html.erb:10
+    app/controllers/accounts_controller.rb:5:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (123.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-04 17:50:37) [GET]
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM `accounts` [0m
+Rendering accounts/index
+  [4;36;1mAccount Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+
+ActionView::TemplateError (undefined local variable or method `accounts' for #<ActionView::Base:0xb72953d0>) on line #13 of app/views/accounts/index.html.erb:
+10: <% @accounts.each do |ac| %>
+11:   <tr>
+12:     <td><%=h ac.account_number %></td>
+13:     <td><%= link_to 'Show', accounts %></td>
+14:     <td><%= link_to 'Edit', edit_account_path(account) %></td>
+15:     <td><%= link_to 'Destroy', account, :confirm => 'Are you sure?', :method => :delete %></td>
+16:   </tr>
+
+    app/views/accounts/index.html.erb:13
+    app/views/accounts/index.html.erb:10:in `each'
+    app/views/accounts/index.html.erb:10
+    app/controllers/accounts_controller.rb:5:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (55.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-04 17:52:20) [GET]
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM `accounts` [0m
+Rendering accounts/index
+  [4;36;1mAccount Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+Completed in 173ms (View: 152, DB: 3) | 200 OK [http://localhost/accounts]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#show (for 127.0.0.1 at 2010-03-04 17:52:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAccount Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accounts`[0m
+  [4;36;1mAccount Load (1.1ms)[0m   [0;1mSELECT * FROM `accounts` WHERE (`accounts`.`id` = 1) [0m
+Rendering accounts/show
+Completed in 46ms (View: 20, DB: 4) | 200 OK [http://localhost/accounts/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-04 17:52:30) [GET]
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM `accounts` [0m
+Rendering accounts/index
+  [4;36;1mAccount Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+Completed in 52ms (View: 31, DB: 3) | 200 OK [http://localhost/accounts]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-04 17:52:33) [GET]
+  [4;35;1mAccount Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `accounts`[0m
+Rendering accounts/new
+  [4;36;1mSupplier Load (0.2ms)[0m   [0;1mSELECT * FROM `suppliers` [0m
+Completed in 51ms (View: 29, DB: 3) | 200 OK [http://localhost/accounts/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePeople (20100302025203)
+Migrating to BooleanBox (20100302031953)
+Migrating to SelectBox (20100302155917)
+Migrating to Email (20100303032351)
+Migrating to Exclusion (20100303040548)
+Migrating to Qualification (20100303050501)
+Migrating to Password (20100303053049)
+Migrating to Age (20100303062850)
+Migrating to Payment (20100303065210)
+Migrating to ExpirationDate (20100303072004)
+Migrating to Phone (20100303090422)
+Migrating to Passport (20100304044402)
+Migrating to CreateCustomers (20100304070445)
+Migrating to Assoc (20100304070822)
+Migrating to Wrong (20100304080514)
+Migrating to CreateAccounts (20100304081529)
+Migrating to Association (20100304092956)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mMysql::Error: Table 'suppliers' already exists: CREATE TABLE `suppliers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePeople (20100302025203)
+Migrating to BooleanBox (20100302031953)
+Migrating to SelectBox (20100302155917)
+Migrating to Email (20100303032351)
+Migrating to Exclusion (20100303040548)
+Migrating to Qualification (20100303050501)
+Migrating to Password (20100303053049)
+Migrating to Age (20100303062850)
+Migrating to Payment (20100303065210)
+Migrating to ExpirationDate (20100303072004)
+Migrating to Phone (20100303090422)
+Migrating to Passport (20100304044402)
+Migrating to CreateCustomers (20100304070445)
+Migrating to Assoc (20100304070822)
+Migrating to Wrong (20100304080514)
+Migrating to CreateAccounts (20100304081529)
+Migrating to Association (20100304092956)
+  [4;36;1mSQL (141.8ms)[0m   [0;1mCREATE TABLE `suppliers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (254.7ms)[0m   [0mCREATE TABLE `accounts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `supplier_id` varchar(255), `account_number` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (44.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100304092956')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mdescribe `accounts`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `accounts`[0m
+  [4;35;1mSQL (3.1ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mdescribe `people`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW KEYS FROM `people`[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mSHOW FIELDS FROM `suppliers`[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mdescribe `suppliers`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `suppliers`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-04 21:59:24) [GET]
+  [4;36;1mAccount Load (11.1ms)[0m   [0;1mSELECT * FROM `accounts` [0m
+Rendering accounts/index
+Completed in 146ms (View: 76, DB: 11) | 200 OK [http://localhost/accounts]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-04 21:59:26) [GET]
+  [4;35;1mAccount Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `accounts`[0m
+Rendering accounts/new
+  [4;36;1mSupplier Load (0.8ms)[0m   [0;1mSELECT * FROM `suppliers` [0m
+Completed in 88ms (View: 65, DB: 3) | 200 OK [http://localhost/accounts/new]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SuppliersController#index (for 127.0.0.1 at 2010-03-04 21:59:33) [GET]
+  [4;35;1mSupplier Load (0.8ms)[0m   [0mSELECT * FROM `suppliers` [0m
+Rendering suppliers/index
+Completed in 44ms (View: 24, DB: 1) | 200 OK [http://localhost/suppliers]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SuppliersController#new (for 127.0.0.1 at 2010-03-04 21:59:35) [GET]
+  [4;36;1mSupplier Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `suppliers`[0m
+Rendering suppliers/new
+Completed in 50ms (View: 27, DB: 3) | 200 OK [http://localhost/suppliers/new]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SuppliersController#create (for 127.0.0.1 at 2010-03-04 21:59:44) [POST]
+  Parameters: {"commit"=>"Create", "supplier"=>{"name"=>"Socialwalk"}, "authenticity_token"=>"2/IuESw3pAWvfHWu1RzUjnJCYn6Xb8EVRG9L4gjPXQQ="}
+  [4;35;1mSupplier Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `suppliers`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSupplier Create (0.9ms)[0m   [0mINSERT INTO `suppliers` (`name`, `created_at`, `updated_at`) VALUES('Socialwalk', '2010-03-04 13:59:44', '2010-03-04 13:59:44')[0m
+  [4;36;1mSQL (50.8ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/suppliers/1
+Completed in 87ms (DB: 55) | 302 Found [http://localhost/suppliers]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SuppliersController#show (for 127.0.0.1 at 2010-03-04 21:59:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSupplier Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `suppliers`[0m
+  [4;36;1mSupplier Load (0.9ms)[0m   [0;1mSELECT * FROM `suppliers` WHERE (`suppliers`.`id` = 1) [0m
+Rendering suppliers/show
+Completed in 119ms (View: 94, DB: 3) | 200 OK [http://localhost/suppliers/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SuppliersController#edit (for 127.0.0.1 at 2010-03-04 21:59:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSupplier Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `suppliers`[0m
+  [4;36;1mSupplier Load (0.3ms)[0m   [0;1mSELECT * FROM `suppliers` WHERE (`suppliers`.`id` = 1) [0m
+Rendering suppliers/edit
+Completed in 55ms (View: 32, DB: 3) | 200 OK [http://localhost/suppliers/1/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SuppliersController#update (for 127.0.0.1 at 2010-03-04 21:59:49) [PUT]
+  Parameters: {"commit"=>"Update", "supplier"=>{"name"=>"Socialwalk"}, "authenticity_token"=>"2/IuESw3pAWvfHWu1RzUjnJCYn6Xb8EVRG9L4gjPXQQ=", "id"=>"1"}
+  [4;35;1mSupplier Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `suppliers`[0m
+  [4;36;1mSupplier Load (0.3ms)[0m   [0;1mSELECT * FROM `suppliers` WHERE (`suppliers`.`id` = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/suppliers/1
+Completed in 35ms (DB: 4) | 302 Found [http://localhost/suppliers/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SuppliersController#show (for 127.0.0.1 at 2010-03-04 21:59:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSupplier Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `suppliers`[0m
+  [4;36;1mSupplier Load (0.3ms)[0m   [0;1mSELECT * FROM `suppliers` WHERE (`suppliers`.`id` = 1) [0m
+Rendering suppliers/show
+Completed in 12ms (View: 3, DB: 1) | 200 OK [http://localhost/suppliers/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SuppliersController#index (for 127.0.0.1 at 2010-03-04 21:59:51) [GET]
+  [4;35;1mSupplier Load (0.8ms)[0m   [0mSELECT * FROM `suppliers` [0m
+Rendering suppliers/index
+  [4;36;1mSupplier Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `suppliers`[0m
+
+ActionView::TemplateError (undefined local variable or method `supplier' for #<ActionView::Base:0xb704f0a8>) on line #13 of app/views/suppliers/index.html.erb:
+10: <% @suppliers.each do |s| %>
+11:   <tr>
+12:     <td><%=h s.name %></td>
+13:     <td><%= link_to 'Show', supplier %></td>
+14:     <td><%= link_to 'Edit', edit_supplier_path(supplier) %></td>
+15:     <td><%= link_to 'Destroy', supplier, :confirm => 'Are you sure?', :method => :delete %></td>
+16:   </tr>
+
+    app/views/suppliers/index.html.erb:13
+    app/views/suppliers/index.html.erb:10:in `each'
+    app/views/suppliers/index.html.erb:10
+    app/controllers/suppliers_controller.rb:5:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (206.5ms)
+Rendered rescues/_request_and_response (2.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SuppliersController#index (for 127.0.0.1 at 2010-03-04 21:59:51) [GET]
+  [4;35;1mSupplier Load (0.1ms)[0m   [0mSELECT * FROM `suppliers` [0m
+Rendering suppliers/index
+  [4;36;1mSupplier Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `suppliers`[0m
+
+ActionView::TemplateError (undefined local variable or method `supplier' for #<ActionView::Base:0xb71e4b34>) on line #13 of app/views/suppliers/index.html.erb:
+10: <% @suppliers.each do |s| %>
+11:   <tr>
+12:     <td><%=h s.name %></td>
+13:     <td><%= link_to 'Show', supplier %></td>
+14:     <td><%= link_to 'Edit', edit_supplier_path(supplier) %></td>
+15:     <td><%= link_to 'Destroy', supplier, :confirm => 'Are you sure?', :method => :delete %></td>
+16:   </tr>
+
+    app/views/suppliers/index.html.erb:13
+    app/views/suppliers/index.html.erb:10:in `each'
+    app/views/suppliers/index.html.erb:10
+    app/controllers/suppliers_controller.rb:5:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (55.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SuppliersController#index (for 127.0.0.1 at 2010-03-04 22:00:28) [GET]
+  [4;35;1mSupplier Load (0.1ms)[0m   [0mSELECT * FROM `suppliers` [0m
+Rendering suppliers/index
+  [4;36;1mSupplier Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `suppliers`[0m
+
+ActionView::TemplateError (undefined local variable or method `supplier' for #<ActionView::Base:0xb73a07c0>) on line #13 of app/views/suppliers/index.html.erb:
+10: <% @suppliers.each do |s| %>
+11:   <tr>
+12:     <td><%=h s.name %></td>
+13:     <td><%= link_to 'Show', supplier %></td>
+14:     <td><%= link_to 'Edit', edit_supplier_path(supplier) %></td>
+15:     <td><%= link_to 'Destroy', supplier, :confirm => 'Are you sure?', :method => :delete %></td>
+16:   </tr>
+
+    app/views/suppliers/index.html.erb:13
+    app/views/suppliers/index.html.erb:10:in `each'
+    app/views/suppliers/index.html.erb:10
+    app/controllers/suppliers_controller.rb:5:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (58.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SuppliersController#index (for 127.0.0.1 at 2010-03-04 22:01:09) [GET]
+  [4;35;1mSupplier Load (0.3ms)[0m   [0mSELECT * FROM `suppliers` [0m
+Rendering suppliers/index
+  [4;36;1mSupplier Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `suppliers`[0m
+
+ActionView::TemplateError (undefined local variable or method `suppliers' for #<ActionView::Base:0xb705096c>) on line #13 of app/views/suppliers/index.html.erb:
+10: <% @suppliers.each do |s| %>
+11:   <tr>
+12:     <td><%=h s.name %></td>
+13:     <td><%= link_to 'Show', suppliers %></td>
+14:     <td><%= link_to 'Edit', edit_supplier_path(supplier) %></td>
+15:     <td><%= link_to 'Destroy', supplier, :confirm => 'Are you sure?', :method => :delete %></td>
+16:   </tr>
+
+    app/views/suppliers/index.html.erb:13
+    app/views/suppliers/index.html.erb:10:in `each'
+    app/views/suppliers/index.html.erb:10
+    app/controllers/suppliers_controller.rb:5:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (147.5ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-04 22:01:28) [GET]
+  [4;35;1mAccount Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `accounts`[0m
+Rendering accounts/new
+  [4;36;1mSupplier Load (0.4ms)[0m   [0;1mSELECT * FROM `suppliers` [0m
+
+ActionView::TemplateError ({:prompt=>"-Select ID"} is not a symbol) on line #12 of app/views/accounts/new.html.erb:
+9:   </p>
+10:   <p>
+11:     <%= f.label :Supplier_ID %><br />
+12:     <%= f.collection_select(:supplier_id, Supplier.all, :id, options ={:prompt => "-Select ID"}) %>
+13:   </p>
+14:   <p>
+15:     <%= f.submit 'Create' %>
+
+    app/views/accounts/new.html.erb:12
+    app/views/accounts/new.html.erb:3
+    app/controllers/accounts_controller.rb:23:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-04 22:01:35) [GET]
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM `accounts` [0m
+Rendering accounts/index
+Completed in 22ms (View: 2, DB: 1) | 200 OK [http://localhost/accounts]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-04 22:01:36) [GET]
+  [4;36;1mAccount Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+Rendering accounts/new
+  [4;35;1mSupplier Load (0.3ms)[0m   [0mSELECT * FROM `suppliers` [0m
+
+ActionView::TemplateError ({:prompt=>"-Select ID"} is not a symbol) on line #12 of app/views/accounts/new.html.erb:
+9:   </p>
+10:   <p>
+11:     <%= f.label :Supplier_ID %><br />
+12:     <%= f.collection_select(:supplier_id, Supplier.all, :id, options ={:prompt => "-Select ID"}) %>
+13:   </p>
+14:   <p>
+15:     <%= f.submit 'Create' %>
+
+    app/views/accounts/new.html.erb:12
+    app/views/accounts/new.html.erb:3
+    app/controllers/accounts_controller.rb:23:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (5.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-04 22:03:39) [GET]
+  [4;36;1mAccount Load (0.9ms)[0m   [0;1mSELECT * FROM `accounts` [0m
+Rendering accounts/index
+Completed in 25ms (View: 2, DB: 6) | 200 OK [http://localhost/accounts]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-04 22:03:41) [GET]
+  [4;35;1mAccount Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `accounts`[0m
+Rendering accounts/new
+  [4;36;1mSupplier Load (0.1ms)[0m   [0;1mSELECT * FROM `suppliers` [0m
+  [4;35;1mSupplier Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `suppliers`[0m
+Completed in 46ms (View: 23, DB: 4) | 200 OK [http://localhost/accounts/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-04 22:03:53) [GET]
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM `accounts` [0m
+Rendering accounts/index
+Completed in 10ms (View: 1, DB: 0) | 200 OK [http://localhost/accounts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-04 22:03:59) [GET]
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM `accounts` [0m
+Rendering accounts/index
+Completed in 23ms (View: 2, DB: 1) | 200 OK [http://localhost/accounts]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-04 22:04:01) [GET]
+  [4;36;1mAccount Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+Rendering accounts/new
+  [4;35;1mSupplier Load (0.2ms)[0m   [0mSELECT * FROM `suppliers` [0m
+  [4;36;1mSupplier Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `suppliers`[0m
+Completed in 24ms (View: 13, DB: 2) | 200 OK [http://localhost/accounts/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-04 22:04:07) [GET]
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM `accounts` [0m
+Rendering accounts/index
+Completed in 22ms (View: 2, DB: 0) | 200 OK [http://localhost/accounts]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SuppliersController#index (for 127.0.0.1 at 2010-03-04 22:04:22) [GET]
+  [4;36;1mSupplier Load (0.4ms)[0m   [0;1mSELECT * FROM `suppliers` [0m
+Rendering suppliers/index
+  [4;35;1mSupplier Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `suppliers`[0m
+
+ActionView::TemplateError (undefined local variable or method `supplier' for #<ActionView::Base:0xb6ff736c>) on line #13 of app/views/suppliers/index.html.erb:
+10: <% @suppliers.each do |s| %>
+11:   <tr>
+12:     <td><%=h s.name %></td>
+13:     <td><%= link_to 'Show', supplier %></td>
+14:     <td><%= link_to 'Edit', edit_supplier_path(supplier) %></td>
+15:     <td><%= link_to 'Destroy', supplier, :confirm => 'Are you sure?', :method => :delete %></td>
+16:   </tr>
+
+    app/views/suppliers/index.html.erb:13
+    app/views/suppliers/index.html.erb:10:in `each'
+    app/views/suppliers/index.html.erb:10
+    app/controllers/suppliers_controller.rb:5:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (146.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SuppliersController#index (for 127.0.0.1 at 2010-03-04 22:04:59) [GET]
+  [4;36;1mSupplier Load (0.4ms)[0m   [0;1mSELECT * FROM `suppliers` [0m
+Rendering suppliers/index
+  [4;35;1mSupplier Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `suppliers`[0m
+
+ActionView::TemplateError (undefined local variable or method `suppliers' for #<ActionView::Base:0xb71b15a4>) on line #13 of app/views/suppliers/index.html.erb:
+10: <% @suppliers.each do |s| %>
+11:   <tr>
+12:     <td><%=h s.name %></td>
+13:     <td><%= link_to 'Show', suppliers %></td>
+14:     <td><%= link_to 'Edit', edit_supplier_path(supplier) %></td>
+15:     <td><%= link_to 'Destroy', supplier, :confirm => 'Are you sure?', :method => :delete %></td>
+16:   </tr>
+
+    app/views/suppliers/index.html.erb:13
+    app/views/suppliers/index.html.erb:10:in `each'
+    app/views/suppliers/index.html.erb:10
+    app/controllers/suppliers_controller.rb:5:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (57.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SuppliersController#index (for 127.0.0.1 at 2010-03-04 22:05:15) [GET]
+  [4;36;1mSupplier Load (0.3ms)[0m   [0;1mSELECT * FROM `suppliers` [0m
+Rendering suppliers/index
+  [4;35;1mSupplier Columns (3.9ms)[0m   [0mSHOW FIELDS FROM `suppliers`[0m
+
+ActionView::TemplateError (undefined local variable or method `s' for #<ActionView::Base:0xb7349cb8>) on line #12 of app/views/suppliers/index.html.erb:
+9: 
+10: <% @suppliers.each do |supplier| %>
+11:   <tr>
+12:     <td><%=h s.name %></td>
+13:     <td><%= link_to 'Show', suppliers %></td>
+14:     <td><%= link_to 'Edit', edit_supplier_path(supplier) %></td>
+15:     <td><%= link_to 'Destroy', supplier, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/suppliers/index.html.erb:12
+    app/views/suppliers/index.html.erb:10:in `each'
+    app/views/suppliers/index.html.erb:10
+    app/controllers/suppliers_controller.rb:5:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.6ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SuppliersController#index (for 127.0.0.1 at 2010-03-04 22:05:16) [GET]
+  [4;36;1mSupplier Load (0.2ms)[0m   [0;1mSELECT * FROM `suppliers` [0m
+Rendering suppliers/index
+  [4;35;1mSupplier Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `suppliers`[0m
+
+ActionView::TemplateError (undefined local variable or method `s' for #<ActionView::Base:0xb6fff4cc>) on line #12 of app/views/suppliers/index.html.erb:
+9: 
+10: <% @suppliers.each do |supplier| %>
+11:   <tr>
+12:     <td><%=h s.name %></td>
+13:     <td><%= link_to 'Show', suppliers %></td>
+14:     <td><%= link_to 'Edit', edit_supplier_path(supplier) %></td>
+15:     <td><%= link_to 'Destroy', supplier, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/suppliers/index.html.erb:12
+    app/views/suppliers/index.html.erb:10:in `each'
+    app/views/suppliers/index.html.erb:10
+    app/controllers/suppliers_controller.rb:5:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (141.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SuppliersController#index (for 127.0.0.1 at 2010-03-04 22:05:32) [GET]
+  [4;36;1mSupplier Load (0.4ms)[0m   [0;1mSELECT * FROM `suppliers` [0m
+Rendering suppliers/index
+  [4;35;1mSupplier Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `suppliers`[0m
+
+ActionView::TemplateError (undefined local variable or method `suppliers' for #<ActionView::Base:0xb71dce84>) on line #13 of app/views/suppliers/index.html.erb:
+10: <% @suppliers.each do |supplier| %>
+11:   <tr>
+12:     <td><%=h supplier.name %></td>
+13:     <td><%= link_to 'Show', suppliers %></td>
+14:     <td><%= link_to 'Edit', edit_supplier_path(supplier) %></td>
+15:     <td><%= link_to 'Destroy', supplier, :confirm => 'Are you sure?', :method => :delete %></td>
+16:   </tr>
+
+    app/views/suppliers/index.html.erb:13
+    app/views/suppliers/index.html.erb:10:in `each'
+    app/views/suppliers/index.html.erb:10
+    app/controllers/suppliers_controller.rb:5:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (88.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SuppliersController#index (for 127.0.0.1 at 2010-03-04 22:05:46) [GET]
+  [4;36;1mSupplier Load (0.4ms)[0m   [0;1mSELECT * FROM `suppliers` [0m
+Rendering suppliers/index
+  [4;35;1mSupplier Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `suppliers`[0m
+Completed in 55ms (View: 33, DB: 3) | 200 OK [http://localhost/suppliers]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SuppliersController#show (for 127.0.0.1 at 2010-03-04 22:05:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSupplier Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `suppliers`[0m
+  [4;35;1mSupplier Load (0.1ms)[0m   [0mSELECT * FROM `suppliers` WHERE (`suppliers`.`id` = 1) [0m
+Rendering suppliers/show
+Completed in 13ms (View: 3, DB: 1) | 200 OK [http://localhost/suppliers/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SuppliersController#index (for 127.0.0.1 at 2010-03-04 22:05:54) [GET]
+  [4;36;1mSupplier Load (0.5ms)[0m   [0;1mSELECT * FROM `suppliers` [0m
+Rendering suppliers/index
+  [4;35;1mSupplier Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `suppliers`[0m
+Completed in 43ms (View: 20, DB: 3) | 200 OK [http://localhost/suppliers]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SuppliersController#new (for 127.0.0.1 at 2010-03-04 22:05:57) [GET]
+  [4;36;1mSupplier Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `suppliers`[0m
+Rendering suppliers/new
+Completed in 36ms (View: 14, DB: 3) | 200 OK [http://localhost/suppliers/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SuppliersController#create (for 127.0.0.1 at 2010-03-04 22:06:11) [POST]
+  Parameters: {"commit"=>"Create", "supplier"=>{"name"=>"Msc"}, "authenticity_token"=>"2/IuESw3pAWvfHWu1RzUjnJCYn6Xb8EVRG9L4gjPXQQ="}
+  [4;35;1mSupplier Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `suppliers`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSupplier Create (0.3ms)[0m   [0mINSERT INTO `suppliers` (`name`, `created_at`, `updated_at`) VALUES('Msc', '2010-03-04 14:06:11', '2010-03-04 14:06:11')[0m
+  [4;36;1mSQL (50.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/suppliers/2
+Completed in 68ms (DB: 52) | 302 Found [http://localhost/suppliers]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SuppliersController#show (for 127.0.0.1 at 2010-03-04 22:06:11) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSupplier Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `suppliers`[0m
+  [4;36;1mSupplier Load (0.4ms)[0m   [0;1mSELECT * FROM `suppliers` WHERE (`suppliers`.`id` = 2) [0m
+Rendering suppliers/show
+Completed in 13ms (View: 3, DB: 1) | 200 OK [http://localhost/suppliers/2]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SuppliersController#index (for 127.0.0.1 at 2010-03-04 22:06:13) [GET]
+  [4;35;1mSupplier Load (0.8ms)[0m   [0mSELECT * FROM `suppliers` [0m
+Rendering suppliers/index
+  [4;36;1mSupplier Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `suppliers`[0m
+Completed in 54ms (View: 31, DB: 3) | 200 OK [http://localhost/suppliers]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-04 22:06:20) [GET]
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM `accounts` [0m
+Rendering accounts/index
+Completed in 22ms (View: 2, DB: 1) | 200 OK [http://localhost/accounts]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#new (for 127.0.0.1 at 2010-03-04 22:06:23) [GET]
+  [4;36;1mAccount Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+Rendering accounts/new
+  [4;35;1mSupplier Load (0.2ms)[0m   [0mSELECT * FROM `suppliers` [0m
+  [4;36;1mSupplier Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `suppliers`[0m
+Completed in 26ms (View: 15, DB: 2) | 200 OK [http://localhost/accounts/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#create (for 127.0.0.1 at 2010-03-04 22:06:29) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"2/IuESw3pAWvfHWu1RzUjnJCYn6Xb8EVRG9L4gjPXQQ=", "account"=>{"supplier_id"=>"1", "account_number"=>"1234"}}
+  [4;35;1mAccount Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `accounts`[0m
+WARNING: Can't mass-assign these protected attributes: supplier_id
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAccount Create (0.3ms)[0m   [0mINSERT INTO `accounts` (`created_at`, `updated_at`, `supplier_id`, `account_number`) VALUES('2010-03-04 14:06:29', '2010-03-04 14:06:29', NULL, '1234')[0m
+  [4;36;1mSQL (49.1ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/accounts/1
+Completed in 64ms (DB: 51) | 302 Found [http://localhost/accounts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#show (for 127.0.0.1 at 2010-03-04 22:06:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAccount Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `accounts`[0m
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT * FROM `accounts` WHERE (`accounts`.`id` = 1) [0m
+Rendering accounts/show
+Completed in 21ms (View: 10, DB: 2) | 200 OK [http://localhost/accounts/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountsController#index (for 127.0.0.1 at 2010-03-04 22:06:33) [GET]
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM `accounts` [0m
+Rendering accounts/index
+  [4;36;1mAccount Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `accounts`[0m
+Completed in 18ms (View: 8, DB: 2) | 200 OK [http://localhost/accounts]
