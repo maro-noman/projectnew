@@ -1,0 +1,63 @@
+
+
+<% form_for(@person) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+   <p>
+    <%= f.label :password %><br />
+    <%= f.text_field :password %>
+  </p>
+  <p>
+    <%= f.label :age %><br />
+    <%= f.text_field :age %>
+  </p>
+  <p>
+    <%= f.label :gender %><br />
+    <%= select_tag "person[gender]", options_for_select([["Male", "m"], ["Female", "f"]]) %>
+  </p>
+  <p>
+    <%= f.label :terms %><br />
+    <%= f.check_box :terms %>
+  </p>
+  <p>
+    <%= f.label :payment %><br />
+    <%= select_tag "person[payment]", options_for_select([["credit card", "credit card"], ["bank transfer", "bank trasnfer"]]) %>
+  </p>
+  <p>
+    <label>Card Number</label><br />
+    <%= f.text_field :cardnumber %>
+  </p>
+  <p>
+    <label>Expiration Date</label><br />
+    <%= f.text_field :expiration_date %>
+  </p>
+  <p>
+    <%= f.label :job %><br />
+    <%= f.text_field :job %>
+  </p>
+  <p>
+    <%= f.label :qualification %><br />
+    <%= f.text_field :qualification %>
+  </p>
+  <p>
+    <label>E-mail</label><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <label>E-mail Confirmation</label><br />
+    <%= f.text_field :email_confirmation %>
+  </p>
+  <p>
+    <%= f.submit 'Save' %>
+  </p>
+<% end %>
+
+
+
+
+ 
+  

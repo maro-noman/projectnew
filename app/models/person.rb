@@ -1,0 +1,39 @@
+class Person < ActiveRecord::Base
+  attr_accessible :name, :terms, :gender, :email, :email_confirmation, :job, :qualification, :password, :age,
+  :payment, :cardnumber, :expiration_date, :phone 
+  validates_presence_of :name, :password, :age
+  validates_acceptance_of :terms, :accept => true
+  validates_confirmation_of :email 
+  validates_presence_of :email_confirmation
+  validates_exclusion_of :job, :in => %w(student), :message => "{{value}} is not allowed"
+  validates_format_of :name, :with => /\A[a-zA-Z]+\z/, :message => "Only letters allowed" 
+  validates_inclusion_of :qualification, :in => %w(degree master phd), :message => "{{value}} is not a valid      qualification" 
+  validates_length_of :password, :minimum => 8
+  validates_numericality_of :age, :only_integer => true 
+  validates_numericality_of :cardnumber, :allow_blank => true 
+  validates_uniqueness_of :email 
+  validates_uniqueness_of :job, :case_sensitive => false 
+  
+  validates_presence_of :cardnumber, :if => :paid_with_card?   
+  def paid_with_card? 
+    payment == "credit card"  
+  end 
+  validates_presence_of :expiration_date, :if => :paid_with_card?   
+
+
+  validate :expiration_date_cannot_be_in_the_past, :a_method_used_for_validation_purposes, :a_method_used
+  def expiration_date_cannot_be_in_the_past 
+    errors.add(:expiration_date, "can't be in the past") if !expiration_date.blank? and expiration_date < Date.today 
+  end  
+  
+  def a_method_used_for_validation_purposes 
+    errors.add_to_base("The job field can't be blank, the age is less than 18 ...") if job.blank? && age < 18 
+  end 
+
+  def a_method_used
+    errors.add(:name, "cannot contain the characters !@#%*()_-+=")  
+  end 
+
+
+
+end

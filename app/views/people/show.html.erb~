@@ -1,0 +1,47 @@
+<p>
+  <b>Name:</b>
+  <%=h @person.name %>
+</p>
+<p>
+  <b>Password:</b>
+  <%=h @person.password %>
+</p>
+<p>
+  <b>Age:</b>
+  <%=h @person.age %>
+</p>
+<p>
+  <b>Gender:</b>
+  <%=h @person.gender %>
+</p>
+<p>
+  <b>Terms:</b>
+  <%=h @person.terms %>
+</p>
+<p>
+  <b>Payment:</b>
+  <%=h @person.payment %>
+</p>
+<p>
+  <b>Card.No:</b>
+  <%=h @person.cardnumber %>
+</p>
+<p>
+  <b>Expiration Date:</b>
+  <%=h @person.expiration_date %>
+</p>
+<p>
+  <b>Job:</b>
+  <%=h @person.job %>
+</p>
+<p>
+  <b>Qualification:</b>
+  <%=h @person.qualification %>
+</p>
+<p>
+  <b>E-mail:</b>
+  <%=h @person.email %>
+</p>
+
+<%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Back', people_path %>

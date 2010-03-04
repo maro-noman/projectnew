@@ -1,0 +1,31 @@
+<h1>New Person</h1>
+
+<% form_for(@person) do |person| %>
+  <%= person.error_messages %>
+
+  <p>
+    <%= person.label :name %><br />
+    <%= person.text_field :name %>
+  </p>
+  <p>
+    <%= person.label :gender %><br />
+    <%= select_tag "person[gender]", options_for_select([["Male", "m"], ["Female", "f"]]) %>
+  </p> 
+  <p>
+    <%= person.label :terms %><br />
+    <%= person.check_box :terms %>
+  </p>
+  <p>
+    <label>E-mail</label><br />
+    <%= person.text_field :email %>
+  </p>
+  <p>
+    <label>E-mail Confirmation</label><br />
+    <%= person.text_field :email_confirmation %>
+  </p>
+  <p>
+    <%= person.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', people_path %>

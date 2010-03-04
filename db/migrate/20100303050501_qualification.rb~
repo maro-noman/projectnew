@@ -1,0 +1,9 @@
+class Qualification < ActiveRecord::Migration
+  def self.up
+  add_column :people, :qual, :string
+  end
+
+  def self.down
+  remove_column :people, :qual
+  end
+end
