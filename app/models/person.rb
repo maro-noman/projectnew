@@ -9,7 +9,7 @@ class Person < ActiveRecord::Base
   validates_format_of :name, :with => /\A[a-zA-Z]+\z/, :message => "Only letters allowed" 
   validates_inclusion_of :qualification, :in => %w(degree master phd), :message => "{{value}} is not a valid      qualification" 
   validates_length_of :password, :minimum => 8
-  validates_numericality_of :age, :only_integer => true 
+  validates_numericality_of :age, :only_integer => true, :maximum => 2  ### to limit the age range ###  
   validates_numericality_of :cardnumber, :allow_blank => true 
   validates_uniqueness_of :email 
  
