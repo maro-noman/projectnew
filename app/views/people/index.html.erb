@@ -14,7 +14,7 @@
     <th>Job</th>
     <th>Qualification</th>
     <th>E-mail</th>
-    
+    <th>Passport</th>
    
   </tr>
 
@@ -32,6 +32,7 @@
     <td><%=h person.job %></td>
     <td><%=h person.qualification %></td>    
     <td><%=h person.email %></td>
+    <td><%=h person.passport %></td>
     <td><%= link_to 'Show', person %></td>
     <td><%= link_to 'Edit', edit_person_path(person) %></td>
     <td><%= link_to 'Destroy', person, :confirm => 'Are you sure?', :method => :delete %></td>

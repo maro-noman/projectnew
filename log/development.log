@@ -11026,3 +11026,502 @@ Completed in 66ms (View: 20, DB: 6) | 200 OK [http://localhost/people]
   [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
   [4;36;1mPerson Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
   [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (23.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (27.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (41.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePeople (20100302025203)
+Migrating to BooleanBox (20100302031953)
+Migrating to SelectBox (20100302155917)
+Migrating to Email (20100303032351)
+Migrating to Exclusion (20100303040548)
+Migrating to Qualification (20100303050501)
+Migrating to Password (20100303053049)
+Migrating to Age (20100303062850)
+Migrating to Payment (20100303065210)
+Migrating to ExpirationDate (20100303072004)
+Migrating to Phone (20100303090422)
+Migrating to Passport (20100304044402)
+  [4;36;1mSQL (328.0ms)[0m   [0;1mALTER TABLE `people` ADD `passport` varchar(255)[0m
+  [4;35;1mSQL (43.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100304044402')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.1ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mdescribe `people`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW KEYS FROM `people`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-03-04 12:52:54) [GET]
+  [4;36;1mPerson Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (5.2ms)[0m   [0mSELECT * FROM `people` [0m
+Rendering people/index
+Completed in 214ms (View: 198, DB: 7) | 200 OK [http://localhost/people]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2010-03-04 12:52:57) [GET]
+  [4;36;1mPerson Columns (3.1ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+Rendering people/new
+Rendered people/_form (16.9ms)
+Completed in 71ms (View: 44, DB: 4) | 200 OK [http://localhost/people/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2010-03-04 12:53:11) [POST]
+  Parameters: {"person"=>{"name"=>"", "expiration_date"=>"", "email_confirmation"=>"", "cardnumber"=>"", "gender"=>"m", "payment"=>"credit card", "job"=>"", "phone"=>"", "qualification"=>"", "passport"=>"", "terms"=>"0", "age"=>"", "password"=>"", "email"=>""}, "commit"=>"Save", "authenticity_token"=>"2/IuESw3pAWvfHWu1RzUjnJCYn6Xb8EVRG9L4gjPXQQ="}
+  [4;35;1mPerson Columns (3.3ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPerson Load (17.7ms)[0m   [0mSELECT `people`.id FROM `people` WHERE (`people`.`email` = BINARY '') LIMIT 1[0m
+  [4;36;1mPerson Load (6.0ms)[0m   [0;1mSELECT `people`.id FROM `people` WHERE (LOWER(`people`.`job`) = BINARY '') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+
+NoMethodError (undefined method `<' for nil:NilClass):
+  app/models/person.rb:30:in `a_method_used_for_validation_purposes'
+  app/controllers/people_controller.rb:54:in `create'
+  app/controllers/people_controller.rb:53:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (157.2ms)
+Rendered rescues/_request_and_response (6.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2010-03-04 12:53:59) [GET]
+  [4;36;1mPerson Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+Rendering people/new
+Rendered people/_form (83.9ms)
+Completed in 129ms (View: 102, DB: 3) | 200 OK [http://localhost/people/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2010-03-04 12:53:59) [GET]
+  [4;35;1mPerson Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+Rendering people/new
+Rendered people/_form (15.8ms)
+Completed in 28ms (View: 17, DB: 1) | 200 OK [http://localhost/people/new]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2010-03-04 12:54:01) [POST]
+  Parameters: {"person"=>{"name"=>"", "expiration_date"=>"", "email_confirmation"=>"", "cardnumber"=>"", "gender"=>"m", "payment"=>"credit card", "job"=>"", "phone"=>"", "qualification"=>"", "passport"=>"", "terms"=>"0", "age"=>"", "password"=>"", "email"=>""}, "commit"=>"Save", "authenticity_token"=>"2/IuESw3pAWvfHWu1RzUjnJCYn6Xb8EVRG9L4gjPXQQ="}
+  [4;36;1mPerson Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT `people`.id FROM `people` WHERE (`people`.`email` = BINARY '') LIMIT 1[0m
+  [4;35;1mPerson Load (0.3ms)[0m   [0mSELECT `people`.id FROM `people` WHERE (LOWER(`people`.`job`) = BINARY '') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+
+NoMethodError (undefined method `<' for nil:NilClass):
+  app/models/person.rb:30:in `a_method_used_for_validation_purposes'
+  app/controllers/people_controller.rb:54:in `create'
+  app/controllers/people_controller.rb:53:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (87.9ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2010-03-04 12:56:29) [POST]
+  Parameters: {"person"=>{"name"=>"today", "expiration_date"=>"", "email_confirmation"=>"tt", "cardnumber"=>"", "gender"=>"m", "payment"=>"bank trasnfer", "job"=>"teacher", "phone"=>"01989", "qualification"=>"master", "passport"=>"", "terms"=>"1", "age"=>"22", "password"=>"12334dfdf", "email"=>"tt"}, "commit"=>"Save", "authenticity_token"=>"2/IuESw3pAWvfHWu1RzUjnJCYn6Xb8EVRG9L4gjPXQQ="}
+  [4;35;1mPerson Columns (3.4ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT `people`.id FROM `people` WHERE (`people`.`email` = BINARY 'tt') LIMIT 1[0m
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT `people`.id FROM `people` WHERE (LOWER(`people`.`job`) = BINARY 'teacher') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering people/new
+Rendered people/_form (22.1ms)
+Completed in 384ms (View: 29, DB: 5) | 200 OK [http://localhost/people]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2010-03-04 12:57:54) [POST]
+  Parameters: {"person"=>{"name"=>"today", "expiration_date"=>"", "email_confirmation"=>"tt", "cardnumber"=>"", "gender"=>"m", "payment"=>"bank trasnfer", "job"=>"teacher", "phone"=>"01989", "qualification"=>"master", "passport"=>"", "terms"=>"1", "age"=>"22", "password"=>"12334dfdf", "email"=>"tt"}, "commit"=>"Save", "authenticity_token"=>"2/IuESw3pAWvfHWu1RzUjnJCYn6Xb8EVRG9L4gjPXQQ="}
+  [4;36;1mPerson Columns (3.1ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT `people`.id FROM `people` WHERE (`people`.`email` = BINARY 'tt') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+Rendering people/new
+Rendered people/_form (35.9ms)
+Completed in 85ms (View: 39, DB: 4) | 200 OK [http://localhost/people]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#destroy (for 127.0.0.1 at 2010-03-04 13:00:39) [DELETE]
+  Parameters: {"authenticity_token"=>"2/IuESw3pAWvfHWu1RzUjnJCYn6Xb8EVRG9L4gjPXQQ=", "id"=>"42"}
+  [4;36;1mPerson Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (31.1ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 42) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPerson Destroy (12.6ms)[0m   [0mDELETE FROM `people` WHERE `id` = 42[0m
+  [4;36;1mSQL (34.3ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/people
+Completed in 107ms (DB: 81) | 302 Found [http://localhost/people/42]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-03-04 13:00:39) [GET]
+  [4;35;1mPerson Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (0.5ms)[0m   [0;1mSELECT * FROM `people` [0m
+Rendering people/index
+Completed in 162ms (View: 149, DB: 2) | 200 OK [http://localhost/people]
+  [4;35;1mSQL (12.5ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#destroy (for 127.0.0.1 at 2010-03-04 13:00:42) [DELETE]
+  Parameters: {"authenticity_token"=>"2/IuESw3pAWvfHWu1RzUjnJCYn6Xb8EVRG9L4gjPXQQ=", "id"=>"39"}
+  [4;35;1mPerson Columns (3.2ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (1.1ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 39) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mPerson Destroy (1.0ms)[0m   [0;1mDELETE FROM `people` WHERE `id` = 39[0m
+  [4;35;1mSQL (63.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/people
+Completed in 101ms (DB: 81) | 302 Found [http://localhost/people/39]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-03-04 13:00:42) [GET]
+  [4;36;1mPerson Columns (3.1ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (1.1ms)[0m   [0mSELECT * FROM `people` [0m
+Rendering people/index
+Completed in 83ms (View: 55, DB: 5) | 200 OK [http://localhost/people]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#destroy (for 127.0.0.1 at 2010-03-04 13:00:45) [DELETE]
+  Parameters: {"authenticity_token"=>"2/IuESw3pAWvfHWu1RzUjnJCYn6Xb8EVRG9L4gjPXQQ=", "id"=>"35"}
+  [4;36;1mPerson Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (0.8ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 35) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPerson Destroy (0.3ms)[0m   [0mDELETE FROM `people` WHERE `id` = 35[0m
+  [4;36;1mSQL (41.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/people
+Completed in 56ms (DB: 45) | 302 Found [http://localhost/people/35]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-03-04 13:00:45) [GET]
+  [4;35;1mPerson Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM `people` [0m
+Rendering people/index
+Completed in 50ms (View: 39, DB: 2) | 200 OK [http://localhost/people]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#destroy (for 127.0.0.1 at 2010-03-04 13:00:48) [DELETE]
+  Parameters: {"authenticity_token"=>"2/IuESw3pAWvfHWu1RzUjnJCYn6Xb8EVRG9L4gjPXQQ=", "id"=>"37"}
+  [4;35;1mPerson Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 37) [0m
+  [4;35;1mSQL (2.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mPerson Destroy (0.3ms)[0m   [0;1mDELETE FROM `people` WHERE `id` = 37[0m
+  [4;35;1mSQL (64.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/people
+Completed in 81ms (DB: 69) | 302 Found [http://localhost/people/37]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-03-04 13:00:48) [GET]
+  [4;36;1mPerson Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (0.5ms)[0m   [0mSELECT * FROM `people` [0m
+Rendering people/index
+Completed in 55ms (View: 40, DB: 4) | 200 OK [http://localhost/people]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#destroy (for 127.0.0.1 at 2010-03-04 13:01:02) [DELETE]
+  Parameters: {"authenticity_token"=>"2/IuESw3pAWvfHWu1RzUjnJCYn6Xb8EVRG9L4gjPXQQ=", "id"=>"40"}
+  [4;36;1mPerson Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (0.5ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 40) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPerson Destroy (0.3ms)[0m   [0mDELETE FROM `people` WHERE `id` = 40[0m
+  [4;36;1mSQL (130.9ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/people
+Completed in 272ms (DB: 133) | 302 Found [http://localhost/people/40]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-03-04 13:01:03) [GET]
+  [4;35;1mPerson Columns (3.2ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM `people` [0m
+Rendering people/index
+Completed in 54ms (View: 29, DB: 4) | 200 OK [http://localhost/people]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#destroy (for 127.0.0.1 at 2010-03-04 13:01:08) [DELETE]
+  Parameters: {"authenticity_token"=>"2/IuESw3pAWvfHWu1RzUjnJCYn6Xb8EVRG9L4gjPXQQ=", "id"=>"43"}
+  [4;35;1mPerson Columns (7.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (1.1ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 43) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mPerson Destroy (0.7ms)[0m   [0;1mDELETE FROM `people` WHERE `id` = 43[0m
+  [4;35;1mSQL (44.7ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/people
+Completed in 83ms (DB: 55) | 302 Found [http://localhost/people/43]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-03-04 13:01:08) [GET]
+  [4;36;1mPerson Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM `people` [0m
+Rendering people/index
+Completed in 34ms (View: 23, DB: 2) | 200 OK [http://localhost/people]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#destroy (for 127.0.0.1 at 2010-03-04 13:01:12) [DELETE]
+  Parameters: {"authenticity_token"=>"2/IuESw3pAWvfHWu1RzUjnJCYn6Xb8EVRG9L4gjPXQQ=", "id"=>"36"}
+  [4;36;1mPerson Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (0.6ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 36) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPerson Destroy (0.4ms)[0m   [0mDELETE FROM `people` WHERE `id` = 36[0m
+  [4;36;1mSQL (56.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/people
+Completed in 71ms (DB: 59) | 302 Found [http://localhost/people/36]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-03-04 13:01:12) [GET]
+  [4;35;1mPerson Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (0.5ms)[0m   [0;1mSELECT * FROM `people` [0m
+Rendering people/index
+Completed in 36ms (View: 23, DB: 2) | 200 OK [http://localhost/people]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#destroy (for 127.0.0.1 at 2010-03-04 13:01:16) [DELETE]
+  Parameters: {"authenticity_token"=>"2/IuESw3pAWvfHWu1RzUjnJCYn6Xb8EVRG9L4gjPXQQ=", "id"=>"38"}
+  [4;35;1mPerson Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (0.5ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 38) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mPerson Destroy (0.3ms)[0m   [0;1mDELETE FROM `people` WHERE `id` = 38[0m
+  [4;35;1mSQL (56.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/people
+Completed in 70ms (DB: 59) | 302 Found [http://localhost/people/38]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-03-04 13:01:16) [GET]
+  [4;36;1mPerson Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM `people` [0m
+Rendering people/index
+Completed in 28ms (View: 16, DB: 2) | 200 OK [http://localhost/people]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#destroy (for 127.0.0.1 at 2010-03-04 13:01:24) [DELETE]
+  Parameters: {"authenticity_token"=>"2/IuESw3pAWvfHWu1RzUjnJCYn6Xb8EVRG9L4gjPXQQ=", "id"=>"44"}
+  [4;36;1mPerson Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (0.5ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 44) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPerson Destroy (0.3ms)[0m   [0mDELETE FROM `people` WHERE `id` = 44[0m
+  [4;36;1mSQL (42.1ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/people
+Completed in 57ms (DB: 45) | 302 Found [http://localhost/people/44]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-03-04 13:01:24) [GET]
+  [4;35;1mPerson Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (0.5ms)[0m   [0;1mSELECT * FROM `people` [0m
+Rendering people/index
+Completed in 26ms (View: 12, DB: 3) | 200 OK [http://localhost/people]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#destroy (for 127.0.0.1 at 2010-03-04 13:01:30) [DELETE]
+  Parameters: {"authenticity_token"=>"2/IuESw3pAWvfHWu1RzUjnJCYn6Xb8EVRG9L4gjPXQQ=", "id"=>"45"}
+  [4;35;1mPerson Columns (3.2ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (1.1ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = 45) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mPerson Destroy (0.7ms)[0m   [0;1mDELETE FROM `people` WHERE `id` = 45[0m
+  [4;35;1mSQL (44.8ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/people
+Completed in 79ms (DB: 50) | 302 Found [http://localhost/people/45]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-03-04 13:01:31) [GET]
+  [4;36;1mPerson Columns (3.2ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM `people` [0m
+Rendering people/index
+Completed in 30ms (View: 2, DB: 5) | 200 OK [http://localhost/people]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2010-03-04 13:02:15) [GET]
+  [4;36;1mPerson Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+Rendering people/new
+Rendered people/_form (32.6ms)
+Completed in 61ms (View: 36, DB: 3) | 200 OK [http://localhost/people/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2010-03-04 13:03:14) [POST]
+  Parameters: {"person"=>{"name"=>"marwan", "expiration_date"=>"", "email_confirmation"=>"marwan@yah", "cardnumber"=>"", "gender"=>"m", "payment"=>"bank trasnfer", "job"=>"lecturer", "phone"=>"0173773", "qualification"=>"degree", "passport"=>"0192", "terms"=>"1", "age"=>"22", "password"=>"123456", "email"=>"marwan@yah"}, "commit"=>"Save", "authenticity_token"=>"2/IuESw3pAWvfHWu1RzUjnJCYn6Xb8EVRG9L4gjPXQQ="}
+  [4;35;1mPerson Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT `people`.id FROM `people` WHERE (`people`.`email` = BINARY 'marwan@yah') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering people/new
+Rendered people/_form (19.5ms)
+Completed in 46ms (View: 21, DB: 2) | 200 OK [http://localhost/people]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2010-03-04 13:04:47) [POST]
+  Parameters: {"person"=>{"name"=>"marwan", "expiration_date"=>"", "email_confirmation"=>"marwan@yah", "cardnumber"=>"", "gender"=>"m", "payment"=>"bank trasnfer", "job"=>"lecturer", "phone"=>"0173773", "qualification"=>"degree", "passport"=>"0192", "terms"=>"1", "age"=>"22", "password"=>"123456", "email"=>"marwan@yah"}, "commit"=>"Save", "authenticity_token"=>"2/IuESw3pAWvfHWu1RzUjnJCYn6Xb8EVRG9L4gjPXQQ="}
+  [4;35;1mPerson Columns (3.1ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT `people`.id FROM `people` WHERE (`people`.`email` = BINARY 'marwan@yah') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+Rendering people/new
+Rendered people/_form (45.9ms)
+Completed in 93ms (View: 49, DB: 5) | 200 OK [http://localhost/people]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2010-03-04 13:04:57) [POST]
+  Parameters: {"person"=>{"name"=>"marwan", "expiration_date"=>"", "email_confirmation"=>"marwan@yah", "cardnumber"=>"", "gender"=>"m", "payment"=>"credit card", "job"=>"lecturer", "phone"=>"0173773", "qualification"=>"degree", "passport"=>"0192", "terms"=>"1", "age"=>"22", "password"=>"1234561212", "email"=>"marwan@yah"}, "commit"=>"Save", "authenticity_token"=>"2/IuESw3pAWvfHWu1RzUjnJCYn6Xb8EVRG9L4gjPXQQ="}
+  [4;35;1mPerson Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPerson Load (0.1ms)[0m   [0mSELECT `people`.id FROM `people` WHERE (`people`.`email` = BINARY 'marwan@yah') LIMIT 1[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mROLLBACK[0m
+Rendering people/new
+Rendered people/_form (20.7ms)
+Completed in 43ms (View: 22, DB: 3) | 200 OK [http://localhost/people]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2010-03-04 13:05:13) [POST]
+  Parameters: {"person"=>{"name"=>"marwan", "expiration_date"=>"", "email_confirmation"=>"marwan@yah", "cardnumber"=>"", "gender"=>"m", "payment"=>"bank trasnfer", "job"=>"lecturer", "phone"=>"0173773", "qualification"=>"degree", "passport"=>"0192", "terms"=>"1", "age"=>"22", "password"=>"1234561212", "email"=>"marwan@yah"}, "commit"=>"Save", "authenticity_token"=>"2/IuESw3pAWvfHWu1RzUjnJCYn6Xb8EVRG9L4gjPXQQ="}
+  [4;35;1mPerson Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT `people`.id FROM `people` WHERE (`people`.`email` = BINARY 'marwan@yah') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+Rendering people/new
+Rendered people/_form (36.6ms)
+Completed in 84ms (View: 40, DB: 4) | 200 OK [http://localhost/people]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2010-03-04 13:08:38) [POST]
+  Parameters: {"person"=>{"name"=>"marwan", "expiration_date"=>"", "email_confirmation"=>"marwan@yah", "cardnumber"=>"", "gender"=>"m", "payment"=>"credit card", "job"=>"lecturer", "phone"=>"0173773", "qualification"=>"degree", "passport"=>"0192", "terms"=>"1", "age"=>"22", "password"=>"1234561212", "email"=>"marwan@yah"}, "commit"=>"Save", "authenticity_token"=>"2/IuESw3pAWvfHWu1RzUjnJCYn6Xb8EVRG9L4gjPXQQ="}
+  [4;35;1mPerson Columns (3.1ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPerson Load (0.5ms)[0m   [0mSELECT `people`.id FROM `people` WHERE (`people`.`email` = BINARY 'marwan@yah') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+Rendering people/new
+Rendered people/_form (46.4ms)
+Completed in 93ms (View: 50, DB: 5) | 200 OK [http://localhost/people]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2010-03-04 13:09:16) [POST]
+  Parameters: {"person"=>{"name"=>"marwan", "expiration_date"=>"", "email_confirmation"=>"marwan@yah", "cardnumber"=>"", "gender"=>"m", "payment"=>"bank trasnfer", "job"=>"lecturer", "phone"=>"0173773", "qualification"=>"degree", "passport"=>"0192", "terms"=>"1", "age"=>"22", "password"=>"1234561212", "email"=>"marwan@yah"}, "commit"=>"Save", "authenticity_token"=>"2/IuESw3pAWvfHWu1RzUjnJCYn6Xb8EVRG9L4gjPXQQ="}
+  [4;35;1mPerson Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT `people`.id FROM `people` WHERE (`people`.`email` = BINARY 'marwan@yah') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+Rendering people/new
+Rendered people/_form (38.0ms)
+Completed in 87ms (View: 44, DB: 4) | 200 OK [http://localhost/people]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2010-03-04 13:12:57) [POST]
+  Parameters: {"person"=>{"name"=>"marwan", "expiration_date"=>"", "email_confirmation"=>"marwan@yah", "cardnumber"=>"", "gender"=>"m", "payment"=>"bank trasnfer", "job"=>"lecturer", "phone"=>"0173773", "qualification"=>"degree", "passport"=>"0192", "terms"=>"1", "age"=>"22", "password"=>"1234561212", "email"=>"marwan@yah"}, "commit"=>"Save", "authenticity_token"=>"2/IuESw3pAWvfHWu1RzUjnJCYn6Xb8EVRG9L4gjPXQQ="}
+  [4;35;1mPerson Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT `people`.id FROM `people` WHERE (`people`.`email` = BINARY 'marwan@yah') LIMIT 1[0m
+  [4;36;1mPerson Create (0.8ms)[0m   [0;1mINSERT INTO `people` (`name`, `created_at`, `expiration_date`, `updated_at`, `gender`, `cardnumber`, `payment`, `job`, `phone`, `qualification`, `terms`, `password`, `age`, `passport`, `email`) VALUES('marwan', '2010-03-04 05:12:57', NULL, '2010-03-04 05:12:57', 'm', NULL, 'bank trasnfer', 'lecturer', 173773, 'degree', 1, '1234561212', 22, '0192', 'marwan@yah')[0m
+  [4;35;1mSQL (55.3ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/people/46
+Completed in 109ms (DB: 60) | 302 Found [http://localhost/people]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2010-03-04 13:12:57) [GET]
+  Parameters: {"id"=>"46"}
+  [4;36;1mPerson Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (2.6ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 46) [0m
+Rendering people/show
+Completed in 55ms (View: 27, DB: 6) | 200 OK [http://localhost/people/46]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-03-04 13:13:05) [GET]
+  [4;36;1mPerson Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM `people` [0m
+Rendering people/index
+Completed in 46ms (View: 34, DB: 2) | 200 OK [http://localhost/people]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2010-03-04 13:13:11) [POST]
+  Parameters: {"person"=>{"name"=>"marwan", "expiration_date"=>"", "email_confirmation"=>"marwan@yah", "cardnumber"=>"", "gender"=>"m", "payment"=>"bank trasnfer", "job"=>"lecturer", "phone"=>"0173773", "qualification"=>"degree", "passport"=>"0192", "terms"=>"1", "age"=>"22", "password"=>"1234561212", "email"=>"marwan@yah"}, "commit"=>"Save", "authenticity_token"=>"2/IuESw3pAWvfHWu1RzUjnJCYn6Xb8EVRG9L4gjPXQQ="}
+  [4;36;1mPerson Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT `people`.id FROM `people` WHERE (`people`.`email` = BINARY 'marwan@yah') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering people/new
+Rendered people/_form (16.3ms)
+Completed in 46ms (View: 18, DB: 2) | 200 OK [http://localhost/people]

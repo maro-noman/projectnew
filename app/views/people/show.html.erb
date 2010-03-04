@@ -46,6 +46,9 @@
   <b>E-mail:</b>
   <%=h @person.email %>
 </p>
-
+<p>
+  <b>Passport:</b>
+  <%=h @person.passport %>
+</p>
 <%= link_to 'Edit', edit_person_path(@person) %> |
 <%= link_to 'Back', people_path %>
